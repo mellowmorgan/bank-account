@@ -18,27 +18,34 @@ BankAccount.prototype.deposit = function(amount) {
 function displayBalance(account){
     let currentBalance = account.currentBalance;
     $("#balance").text(currentBalance);
-}
+} 
 
 $(document).ready(function(){
     let account;
+    let hasAccount = false;
     $("#formOne").submit(function(event){
         event.preventDefault();
         const name = $("#name").val();
         const initialDeposit = parseInt($("#initial-deposit").val());
         account = new BankAccount(name, initialDeposit);
         displayBalance(account);
+        hasAccount=true;
     });
     $("#formTwo").submit(function(event){
         event.preventDefault();
-        let deposit = parseInt($("#deposit").val());
-        let withdrawal = parseInt($("#withdrawal").val());
-        if(withdrawal){
-            account.withdraw(withdrawal);
+        if(hasAccount){
+            let deposit = parseInt($("#deposit").val());
+            let withdrawal = parseInt($("#withdrawal").val());
+            if(withdrawal){
+                account.withdraw(withdrawal);
+            }
+            if(deposit){
+                account.deposit(deposit);
+            }
+            displayBalance(account);
         }
-        if(deposit){
-            account.deposit(deposit);
+        else{
+            $("#balance").text("Please make an account first");
         }
-        displayBalance(account);
     });
 });
