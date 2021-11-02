@@ -1,0 +1,26 @@
+.left-box{
+  width:33%;
+  display:inline-block;
+  margin: auto;
+  margin-left: 15%;
+  margin-right: 2%;
+  box-shadow: 0px 1px 15px rgb(153, 150, 148);
+  padding:.5rem;
+  
+}
+.right-box{
+  padding:.5rem;
+  display:inline-block;
+  width:33%;
+  margin-right: 15%;
+  margin-left: 1%;
+  box-shadow: 0px 1px 15px rgb(153, 150, 148);
+}
+#current-balance{
+  margin-top:2rem;
+  display:block;
+}
+h2,h3{
+  text-align: center;
+  margin-bottom: 2%;
+}
