@@ -1,27 +1,21 @@
-Describe: BankAccount()
-Test: "Should create BankAccount object from constructor with name and initial deposit amount as properties."
-Code:
-let ba = new BankAccount("Jeff", 8000);
-ba.name;
-ba.initialDeposit;
-Expected Output: "Jeff" 8000
+# Bank Account Webpage
 
-Describe: BankAccount.prototype.getBalance()
-Test: "Should return balance."
-Code:
-ba.getBalance();
-Expected Output: 8000
+#### By Morgan Waites
 
-Describe: BankAccount.prototype.withdraw(amount)
-Test: "Should allow user to withdraw money from bank account."
-Code:
-ba.withdraw(500);
-ba.getBalance();
-Expected Output: 7500
+## Technologies Used
 
-Describe: BankAccount.prototype.deposit(amount)
-Test: "Should add amount to currentBalance."
-Code:
-ba.deposit(2000);
-ba.getBalance();
-ExpectedOutput: 9500
+* Javascript
+* HTML/CSS/Bootstrap
+
+## Description
+
+Webpage simulating withdraw, deposit, initial deposit of bank account to show knowledge of constuctors and methods.
+
+## Setup/Installation Requirements
+
+* git clone this repo
+* navigate to top-level of directory
+* open index.html
+
+## License
+[MIT](https://opensource.org/licenses/MIT) Copyright 2021 Morgan Waites.
